@@ -1,0 +1,21 @@
+{
+  "name": "vuejs-components-basics-plan-picker-component",
+  "version": "1.0.0",
+  "description": "This lab corresponds to the section **Component Basics** of the VueSchool course  [Vue.js Components Fundamentals](https://vueschool.io/courses/vuejs-components-fundamentals)",
+  "main": "index.js",
+  "scripts": {
+    "push": "git commit -am \"$(git diff --name-only | tr '\n' ' ')\" && git push",
+    "dfa": "mmdc -i images/dfa.mmd -o images/dfa.png"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crguezl/vuejs-components-basics-plan-picker-component.git"
+  },
+  "keywords": [],
+  "author": "Casiano Rodriguez Leon <crguezl@ull.edu.es> (https://crguezl.github.io/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crguezl/vuejs-components-basics-plan-picker-component/issues"
+  },
+  "homepage": "https://github.com/crguezl/vuejs-components-basics-plan-picker-component#readme"
+}
