@@ -550,7 +550,7 @@
 
   .plans .active-plan {
     border-color: #352001;
-    background-image: linear-gradient(to bottom right, white, #8F4401);
+    background-image: linear-gradient(to bottom right, white, #5b018f);
   }
 
   .form-group,

@@ -110,23 +110,23 @@ See the solution working at <https://crguezl.github.io/vuejs-components-basics-p
 - [x] Load Vue from the CDN and add the main app
 - [x] Create the `plan` component that encapsulates the template above
 - [x] Add it the `prop` with the `name`, interpolate it inside the component template and update the calls in the HTML accordingly for all the repetitions
-- [ ] Add to the Vue app data the `plans` array of Strings with the names of the plans
-- [ ] Substitute the repetitions of the `<plan>` component  inside  the HTML for a `v-for`  loop
-- [ ] Specify that the `prop` `name` has to be of type `String` and is `required`
+- [x] Add to the Vue app data the `plans` array of Strings with the names of the plans
+- [x] Substitute the repetitions of the `<plan>` component  inside  the HTML for a `v-for` loop
+- [x] Specify that the `prop` `name` has to be of type `String` and is `required`
 
 
 #### [Nested Components](https://vueschool.io/lessons/nested-components) Video
 
-- [ ] Create a component with name `<plan-picker>`  to encapsulate the `.plans` div
-- [ ] Create the template for the component and move the `plans` array into the component
+- [x] Create a component with name `<plan-picker>`  to encapsulate the `.plans` div
+- [x] Create the template for the component and move the `plans` array into the component
 
 #### [Global vs Local Components](https://vueschool.io/lessons/global-vs-local-components)
 
-- [ ] Make the `plan` component local to the `plan-picker` component
-  - [ ] Check that a local component can not be used out of its scope
-- [ ] Make the `plan-picker` component local to the root component
-  - [ ] Register first the component with the name `planPicker` and try to use it. What happens?
-  - [ ] Change the name to `plan-picker`
+- [x] Make the `plan` component local to the `plan-picker` component
+  - [x] Check that a local component can not be used out of its scope
+- [x] Make the `plan-picker` component local to the root component
+  - [x] Register first the component with the name `planPicker` and try to use it. What happens?
+  - [x] Change the name to `plan-picker`
 
 
 #### [Communication Between Components with Custom Events](https://vueschool.io/lessons/communication-between-components) Video
@@ -134,12 +134,13 @@ See the solution working at <https://crguezl.github.io/vuejs-components-basics-p
 We want to add the capability to select a plan. See how the 
 [solution](https://crguezl.github.io/vuejs-components-basics-plan-picker-component/plan-picker/solution.html) works when you click in one of the plans. We want to reproduce this behavior,
 
-- [ ] Add a boolean variable `selected` to the `plan` component
-- [ ] Add a `select` method to the  `plan` component to set the component as selected
-- [ ] Add the code so that when a user clicks **on the root element** of the `plan` component template the `select` method is called
-  - [ ] See [Event Handling](https://vuejs.org/v2/guide/events.html) and [Component Custom Events](https://vuejs.org/v2/guide/components-custom-events.html) in the Vue.js Guide
-  - [ ] What happens if you add the code for the click on **an element inside** the `plan`  component?
-- [ ] Using the object syntax for `v-bind` add a class `active-plan` when a `plan` component is selected so that the background color of the button changes when selected, since the `style.css` contains the following:
+- [x] Add a boolean variable `selected` to the `plan` component
+- [x] Add a `select` method to the  `plan` component to set the component as selected
+- [x] Add the code so that when a user clicks **on the root element** of the `plan` component template the `select` method is called
+  - [x] See [Event Handling](https://vuejs.org/v2/guide/events.html) and [Component Custom Events](https://vuejs.org/v2/guide/components-custom-events.html) in the Vue.js Guide
+  - [x] What happens if you add the code for the click on **an element inside** the `plan` component?
+  * We would have to use an event modifier.
+- [x] Using the object syntax for `v-bind` add a class `active-plan` when a `plan` component is selected so that the background color of the button changes when selected, since the `style.css` contains the following:
 
   ```css 
   .plans .active-plan {
@@ -148,22 +149,22 @@ We want to add the capability to select a plan. See how the
   }
   ```
   See [Class and Style Bindings](https://vuejs.org/v2/guide/class-and-style.html) in the Vue.js Guide
-- [ ] Verify that, unfortunately, the solution given permits several plans to be selected
-- [ ] We need to let the component communicate to its parent when the user has clicked on it. 
+- [x] Verify that, unfortunately, the solution given permits several plans to be selected
+- [x] We need to let the component communicate to its parent when the user has clicked on it. 
       Make the `plan` component to `$emit` an event with name `select` and payload the `name`of the plan
-  - [ ] Read the notes on the api of [vm.$emit( eventName, […args] )](https://crguezl.github.io/learning-vue-geting-started-guide/#vm.emit-eventname-args)
-- [ ] Check in the event tab of the Vue DevTools the presence of the events generated when you click
-- [ ] Inside the `plan-picker` component template set  the triggering of a method `selectPlan` to fire when the `select`  event is emitted. 
-- [ ] Inside the `plan-picker` component add a data attribute `selectedPlan` to store the plan that was selected by the user
-- [ ] Add also the code for the `selectPlan` method
-- [ ] The idea is now that the parent `plan-picker`  component will send the selected plan as a property to the children components.
+  - [x] Read the notes on the api of [vm.$emit( eventName, […args] )](https://crguezl.github.io/learning-vue-geting-started-guide/#vm.emit-eventname-args)
+- [x] Check in the event tab of the Vue DevTools the presence of the events generated when you click
+- [x] Inside the `plan-picker` component template set  the triggering of a method `selectPlan` to fire when the `select`  event is emitted. 
+- [x] Inside the `plan-picker` component add a data attribute `selectedPlan` to store the plan that was selected by the user
+- [x] Add also the code for the `selectPlan` method
+- [x] The idea is now that the parent `plan-picker`  component will send the selected plan as a property to the children components.
   
   Go back to the `plan` component and remove the `selected` data property (it is no longer need, since the parent component now knows which plan has been selected)
-- [ ] Add a property `selectedPlan` to the `plan` component (that will be passed by the parent)
-- [ ] Add a *computed property* `isSelected` to the `plan` component that is `true` when the plan is the one selected
-- [ ] In the template of the `plan` component conditionally bind the class `active-plan` to the `.plan` div  if the plan is selected
-- [ ] Inside the `plan-picker-template` pass the property `selectedPlan` to the children.
-  - [ ] Be carefull that HTML attributes are case insensitive but the name of the `plan` attribute we choose inside the JavaScript code was `selectedPlan` (*CamelCase*) and so to write `v-bind:selectedPlan="..."` is not going to work. You have to use the equivalent *kebab-case* string
+- [x] Add a property `selectedPlan` to the `plan` component (that will be passed by the parent)
+- [x] Add a *computed property* `isSelected` to the `plan` component that is `true` when the plan is the one selected
+- [x] In the template of the `plan` component conditionally bind the class `active-plan` to the `.plan` div  if the plan is selected
+- [x] Inside the `plan-picker-template` pass the property `selectedPlan` to the children.
+  - [x] Be carefull that HTML attributes are case insensitive but the name of the `plan` attribute we choose inside the JavaScript code was `selectedPlan` (*CamelCase*) and so to write `v-bind:selectedPlan="..."` is not going to work. You have to use the equivalent *kebab-case* string
 
 ## Skills Covered
 
