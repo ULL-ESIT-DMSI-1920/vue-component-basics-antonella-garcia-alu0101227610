@@ -1,12 +1,14 @@
-Vue.component('click-counter', {
-    template: '#click-counter-template',
-    data () {
-      return {
-        count: 0
-      }
-    }
-  })
-  
-  new Vue({
-    el: '#app'
-  })
+Vue.component("click-counter", {
+  template: "#click-counter-template",
+  data() {
+    return {
+      count: 0,
+    };
+  },
+});
+
+const template = document.getElementById("click-counter-template");
+
+new Vue({
+  el: "#app",
+});

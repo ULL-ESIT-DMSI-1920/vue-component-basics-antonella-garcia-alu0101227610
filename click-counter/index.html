@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue.JS Component Basics - Antonella Garcia</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="app">
-        <h1>Vue.js Component Basics</h1>
-        <click-counter></click-counter>
-        <click-counter></click-counter>
-        <click-counter></click-counter>
-        <click-counter></click-counter>
+      <h1>Vue.js Component Basics</h1>
+      <click-counter></click-counter>
+      <click-counter></click-counter>
+      <click-counter></click-counter>
+      <click-counter></click-counter>
+    </div>
+    <template id="click-counter-template">
+      <div>
+        <p>the count is:</p>
+        <button @click="count++">{{ count }}</button>
       </div>
-      <script type="text/x-template" id="click-counter-template">
-        <div>
-          <p>the count is:</p>
-          <button @click="count++">{{ count }}</button>
-        </div>
-      </script>
-    
-</body>
+    </template>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="solution-app.js"></script>
+  </body>
 </html>

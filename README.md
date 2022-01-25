@@ -53,11 +53,11 @@ Files [click-counter/solution.html](click-counter/solution.html) and [click-coun
   - [x] Add the `data` function that returns the object with the data. 
   - [x] Set the `count`
   - [x] In the template add the `v-on` to increase the counter each time the button is clicked
-- [ ] Add in the `app` div of the HTML the component just created
-- [ ] Insert new instances of the component in the HTML
-- [ ] Move the template from the `app.js` to the HTML using  a `script` tag
+- [x] Add in the `app` div of the HTML the component just created
+- [x] Insert new instances of the component in the HTML
+- [x] Move the template from the `app.js` to the HTML using  a `script` tag
 - [ ]  Instead of `<script type= 'text/x-template' ...>` try also to use the [`<template>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) HTML tag. 
-  Does it works?
+  Does it work? 
 - [ ] Add a second element, a paragraph `the count is` to the `click-counter` component 
 - [ ] Wrap the two elements in a `<div>`
 - [ ] Move all the code from `app.js` to the HTML `index.html` 
