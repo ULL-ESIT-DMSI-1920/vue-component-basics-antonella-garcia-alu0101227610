@@ -14,5 +14,12 @@
         <click-counter></click-counter>
         <click-counter></click-counter>
       </div>
+      <script type="text/x-template" id="click-counter-template">
+        <div>
+          <p>the count is:</p>
+          <button @click="count++">{{ count }}</button>
+        </div>
+      </script>
+    
 </body>
 </html>
