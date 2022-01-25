@@ -9,18 +9,30 @@
   <body>
     <div id="app">
       <h1>Vue.js Component Basics</h1>
-      <click-counter></click-counter>
-      <click-counter></click-counter>
-      <click-counter></click-counter>
-      <click-counter></click-counter>
+      <click-counter click-title="The first counter is:"></click-counter>
+      <click-counter click-title="The second counter is:"></click-counter>
+      <click-counter click-title="The Third counter is:"></click-counter>
+      <click-counter click-title="The Fourth counter is:"></click-counter>
     </div>
-    <template id="click-counter-template">
+    <script type="text/x-template" id="click-counter-template">
       <div>
         <p>the count is:</p>
         <button @click="count++">{{ count }}</button>
       </div>
-    </template>
+    </script>
     <script src="https://unpkg.com/vue"></script>
-    <script src="solution-app.js"></script>
+    <script>
+      Vue.component("click-counter", {
+        template: "#click-counter-template",
+        data() {
+          return {
+            count: 0,
+          };
+        },
+      });
+      new Vue({
+        el: "#app",
+      });
+    </script>
   </body>
 </html>

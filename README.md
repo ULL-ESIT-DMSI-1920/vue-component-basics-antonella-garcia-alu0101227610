@@ -1,48 +1,8 @@
 # Vue.js Components Basics
 
-This lab corresponds to the section **Component Basics** of the VueSchool course 
-[Vue.js Components Fundamentals](https://vueschool.io/courses/vuejs-components-fundamentals)
+This repository is dedicated to the development of the project Component Basics, following the steps provided by the teacher and the Vue Fundamentals School.
 
-This repository contains only the example codes for 
-
-1. The **click counter** (video *[Introduction to Components](https://vueschool.io/lessons/introduction-to-components)*) and 
-2. **plan-picker** 
-   
-examples used inside the initial section of the tutorial **Component Basics**.
-
-## Folder click-counter: Click Counter Task 
-
-The goal is to write a simple component `<click-counter>`that can be called like that:
-
-```html
-<div id="app">
-    <h1>Vue.js Components Fundamentals</h1>
-    <click-counter></click-counter>
-    <click-counter></click-counter>
-    <click-counter></click-counter>
-    <click-counter></click-counter>
-</div>
-```
-
-so that when you click in the input the counter shown is increased. The code above has to work as shown here:  <https://crguezl.github.io/vuejs-components-basics-plan-picker-component/click-counter/solution.html>
-
-Watch the videos 
-
-1. *[Introduction to Components](https://vueschool.io/lessons/introduction-to-components)* 
-2. [Component's Template](https://vueschool.io/lessons/components-template) 2:20
-
-
-And write your code inside the empty files `index.html` and `app.js`.
-
-Files [click-counter/solution.html](click-counter/solution.html) and [click-counter/solution-app.js](click-counter/solution-app.js) contain the final solution. 
-
-
-```
-├── app.js
-├── index.html
-├── solution-app.js
-└── solution.html
-```
+## Click Counter Task 
 
 ### Check List
 
@@ -56,12 +16,15 @@ Files [click-counter/solution.html](click-counter/solution.html) and [click-coun
 - [x] Add in the `app` div of the HTML the component just created
 - [x] Insert new instances of the component in the HTML
 - [x] Move the template from the `app.js` to the HTML using  a `script` tag
-- [ ]  Instead of `<script type= 'text/x-template' ...>` try also to use the [`<template>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) HTML tag. 
+- [x]  Instead of `<script type= 'text/x-template' ...>` try also to use the [`<template>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) HTML tag. 
   Does it work? 
-- [ ] Add a second element, a paragraph `the count is` to the `click-counter` component 
-- [ ] Wrap the two elements in a `<div>`
-- [ ] Move all the code from `app.js` to the HTML `index.html` 
-- [ ] Add a `prop` with name `click-title` to the `click-counter` component so that instead of the fixed `"the count is"`, the parent component can specify the prefix paragraph:
+
+* No it does not work, working with templates and scripts is quite tricky in vue and html, everything i looked up on the internet was reffered to the work already done.
+
+- [x] Add a second element, a paragraph `the count is` to the `click-counter` component 
+- [x] Wrap the two elements in a `<div>`
+- [x] Move all the code from `app.js` to the HTML `index.html` 
+- [x] Add a `prop` with name `click-title` to the `click-counter` component so that instead of the fixed `"the count is"`, the parent component can specify the prefix paragraph:
 
   ```html
     <click-counter click-title="The first counter is:"></click-counter>
@@ -71,7 +34,11 @@ Files [click-counter/solution.html](click-counter/solution.html) and [click-coun
   Read the section [Prop Casing (camelCase vs kebab-case)](https://crguezl.github.io/learning-vue-geting-started-guide/#prop-casing-camelcase-vs-kebab-case)
   of the *Annotated Reading of the Essentials Section of the Vue.js Guide*
 
-## Folder plan-picker: Plan Picker Task
+  Leave your solution inside the files `index.html` and `app.js`.
+
+* I left the solution in the file Index.html, since there was a step required to copy all the content of app.js to index.html
+
+## Plan Picker Task
 
 In this exercise you have to start from a HTML file that contains  repeated ` <div class="plan">` like
 
@@ -105,7 +72,6 @@ Watch the videos
 * [Global vs Local Components 3:11](https://vueschool.io/lessons/global-vs-local-components)
 * [Communication Between Components with Custom Events](https://vueschool.io/lessons/communication-between-components) 7:24
 
-Leave your solution inside the files `index.html` and `app.js`.
 
 Here is the structure of the folder:
 
@@ -126,7 +92,7 @@ See the solution working at <https://crguezl.github.io/vuejs-components-basics-p
 
 #### [Reusable Components with Props](https://vueschool.io/lessons/reusable-components-with-props)
   
-- [ ]  Use a minimum number of emmet expressions to generate complete the initial `index.html` to have it as at the beginning of the video [Reusable Components with Props](https://vueschool.io/lessons/reusable-components-with-props). The structure to replicate three or four times has to follow this pattern:
+- [x]  Use a minimum number of emmet expressions to generate complete the initial `index.html` to have it as at the beginning of the video [Reusable Components with Props](https://vueschool.io/lessons/reusable-components-with-props). The structure to replicate three or four times has to follow this pattern:
   
   ```html
         <div class="plans">
@@ -140,10 +106,10 @@ See the solution working at <https://crguezl.github.io/vuejs-components-basics-p
             ...  more like the one above
         </div>
   ```
-  - [ ] Here is a [solution](plan-picker/solution.emmet)
-- [ ] Load Vue from the CDN and add the main app
-- [ ] Create the `plan` component that encapsulates the template above
-- [ ] Add it the `prop` with the `name`, interpolate it inside the component template and update the calls in the HTML accordingly for all the repetitions
+  - [x] Here is a [solution](plan-picker/solution.emmet)
+- [x] Load Vue from the CDN and add the main app
+- [x] Create the `plan` component that encapsulates the template above
+- [x] Add it the `prop` with the `name`, interpolate it inside the component template and update the calls in the HTML accordingly for all the repetitions
 - [ ] Add to the Vue app data the `plans` array of Strings with the names of the plans
 - [ ] Substitute the repetitions of the `<plan>` component  inside  the HTML for a `v-for`  loop
 - [ ] Specify that the `prop` `name` has to be of type `String` and is `required`
