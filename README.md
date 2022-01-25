@@ -46,10 +46,10 @@ Files [click-counter/solution.html](click-counter/solution.html) and [click-coun
 
 ### Check List
 
-- [ ]  All along, use as many [emmet expressions](https://docs.emmet.io/cheat-sheet/) as you can to speed up the edition
-- [ ] Set the initial HTML and load Vue from the CDN
-- [ ] Inside the app create the Vue app attached to the corresponding div element 
-- [ ] Create a component `click-counter` using `Vue.component`
+- [x]  All along, use as many [emmet expressions](https://docs.emmet.io/cheat-sheet/) as you can to speed up the edition
+- [x] Set the initial HTML and load Vue from the CDN
+- [x] Inside the app create the Vue app attached to the corresponding div element 
+- [x] Create a component `click-counter` using `Vue.component`
   - [ ] Add the `data` function that returns the object with the data. 
   - [ ] Set the `count`
   - [ ] In the template add the `v-on` to increase the counter each time the button is clicked
