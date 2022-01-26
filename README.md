@@ -1,8 +1,4 @@
-[Click Counter](click-counter){: .btn}
-[Plan Picker](plan-picker){: .btn}
-
-
-## Vue.js Components Basics
+# Vue.js Components Basics
 
 This repository is dedicated to the development of the project Component Basics, following the steps provided by the teacher and the Vue Fundamentals School.
 
